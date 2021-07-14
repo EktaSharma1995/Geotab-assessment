@@ -1,3 +1,4 @@
+// function that returns prettifies string
 function returnPrettiedString(number) {
     const absoluteNumber = Math.abs(Number(number));
     if (absoluteNumber >= 1.0e+12) {
@@ -13,7 +14,7 @@ function returnPrettiedString(number) {
     }
 }
 
-
+// function that convert the number to millions, trillions, billions if not integer, otherwise return the integer
 function performOperations(number, numberToDivide) {
     const modifiedNumber = number / numberToDivide;
     if(Number.isInteger(modifiedNumber)) {
