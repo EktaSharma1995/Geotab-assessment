@@ -1,5 +1,8 @@
+// test cases are written using jest
+
 import * as Utils from './assessment.js';
 
+// test cases that returns success
 test('perform operation - returns modified number with one decimal if not integer', () => {
     expect(Utils.performOperations(9900000000000, 1000000000000)).toBe('9.9');
 });
@@ -28,4 +31,9 @@ test('return pretty string as billion when number has 9 zeroes', () => {
 
 test('return number if less than 6 digits', () => {
     expect(Utils.returnPrettiedString(532)).toBe(532)
+});
+
+// expected failed test cases
+test('perform operation - returns 0 if number to divide is zero', () => {
+    expect(Utils.performOperations(9900000000000, 0)).toBe(0);
 });
